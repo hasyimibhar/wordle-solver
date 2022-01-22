@@ -1,19 +1,26 @@
 ## How it works
 
-At each step, the AI picks the word that has the highest probability of resulting
+At each step, the solver picks the word that has the highest probability of resulting
 in a single letter hit.
+
+Some TODOs
+
+- [ ] The first step should pick a word with the highest no. of vowels instead
+- [ ] The word list I'm using has a lot of words that Worldle considers as not valid. Need to find a better word list
+- [ ] There is a bug where the solver runs out of guesses, which should not happen
+- [ ] The solver's biggest weakness are words that only differ by a single letter. E.g. if the solver tries to solve the word "hails", it manages to guess ".ails" within 3 moves, but then takes a lot of steps to guess the first letter because there are too many possibilities (bails, fails, jails, mails, nails, pails, rails, sails, tails, wails)
 
 ## Guide
 
-To run the AI:
+To run the solver:
 
 ```sh
 python run.py
 ```
 
-The AI will suggest the word to enter. After entering the suggested word,
+The solver will suggest the word to enter. After entering the suggested word,
 enter the outcome (e.g. if everything is grey, then the outcome is `00000`).
-The AI will then suggest the next word to enter.
+The solver will then suggest the next word to enter.
 
 Sample run (wordle 217):
 
